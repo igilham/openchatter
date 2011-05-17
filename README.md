@@ -1,12 +1,7 @@
 OpenChatter
 ===========
 
-Copyright 2011 
-    Ian Gilham
-    Liam Dean
-    William Lord
-    Greg Bautyonok
-    Mark Preston
+Copyright 2011 Ian Gilham, Liam Dean, William Lord, Greg Bautyonok, Mark Preston
 
 OpenChatter is a simple message board loosely inspired by Twitter.
 
