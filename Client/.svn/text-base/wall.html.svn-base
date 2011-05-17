@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery-jtemplates_uncompressed.js"></script>
+	<script type="text/javascript" src="myscripts.js"></script>
+    <link type="text/css" rel="stylesheet" href="styling.css"/>
+    <title>Wall</title>
+	
+</head>
+
+<body>
+    
+    
+    <div id="comment-box">
+        <form method="POST" id="comment_form">
+                <textarea id="comment-input" rows="3" cols="60"></textarea>
+                <div id="btn">
+                    <input id="submit" type="submit" class="submit-btn" value="post it!"/>
+                </div>
+		</form>
+	</div>
+	
+    <!--Template for comments-->
+    <textarea id="comment-template" style="display:none">
+        {#foreach $T.comments as c}
+        <div id="{$T.c.uuid}" class="comment" style="display:none">
+            <div class="comment-body">
+                <a class="user_name" href="http://google.com/">{$T.c.user}</a>
+                {$T.c.text}
+            </div>
+            <div class="meta">
+                <span class="date">{$T.c.date}</span>
+                <span class="timestamp">{$T.c.timestamp}</span>
+                <span class="id">{$T.c.uuid}</span>
+                <span class="comment-actions">
+                     <a class="action" href="http://gregbaut.appspot.com/comments/delete/{$T.c.uuid}">Remove</a>
+                     <a class="action" href="http://google.com/">Report</a>
+                </span>
+            </div>
+        </div>
+        {#/for}
+    </textarea>
+	
+	
+	<div id="output">
+		<p>The output should be visible here.</p>
+	</div>
+
+
+</html>

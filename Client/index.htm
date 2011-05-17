@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script> 
+	<script type="text/javascript" src="jquery-jtemplates_uncompressed.js"></script> 
+	<script type="text/javascript" src="myscripts.js"></script> 
+    <link type="text/css" rel="stylesheet" href="style.css"> 
+    <title>Wall</title> 
+	
+</head> 
+ 
+<body>
+
+	<!--Template for comments-->
+    <textarea id="comment-template" style="display:none">
+        {#foreach $T.comments as c}
+        <div id="{$T.c.uuid}" class="comment" style="display:none">
+            <div class="comment-body">
+                <span class="user_name">{$T.c.user}</span>
+                {$T.c.text}
+            </div>
+            <div class="meta">
+                <span class="date">{$T.c.date}</span>
+                <span class="timestamp">{$T.c.timestamp}</span>
+                <span class="id">{$T.c.uuid}</span>
+                <span class="comment-actions">
+                    {#if $P.user == $T.c.user}
+                     <input type="button" id="{$T.c.uuid}" class="action-delete" value="Remove"></input>
+                    {#/if}
+                </span>
+            </div>
+        </div>
+        {#/for}
+    </textarea>
+
+	<div id="page"> 
+		<div id="content">
+		
+			<div id="header"> 
+				<h1>OpenChatter</h1>
+				<div id="user">
+				    <p id="userName">userName</p>
+				    <p><a id="loginLink" href="#"></a></p>
+				</div>
+			</div> <!-- end of header --> 
+			
+			<div id="contentMain"> 
+				
+				<div id="left"> 
+					<h2>Welcome</h2>
+					
+					<!-- Comments posting box -->
+					<div id="comment-box">
+						<p>Post your message below:</p>
+						<form method="POST" id="comment_form"> 
+							<textarea id="comment-input" rows="3" cols="60"></textarea> 
+							<div id="btn"> 
+								<input id="submit" type="submit" class="submit-btn" value="post it!"/> 
+							</div> 
+						</form>
+					</div>
+
+					<div id="commentsListBox">
+					</div>
+				</div> <!-- end of left --> 
+				
+				<div id="right"> 
+					<h4>Most popular topics</h4>
+					<p>In the last week:</p>
+					<div id="topicListweek">
+					</div>
+					<p>In the last month:</p>
+					<div id="topicListmonth">
+					</div>
+				</div> <!-- end of right --> 
+				
+				<div class="clear"/>
+			</div> <!-- end of contentMain --> 
+			<div id="footer"> 
+				<p class="copyright">&copy; 2009 Ian Gilham, Liam Dean, William Lord, Greg Bautyonok, Mark Preston &#9786;</p> 
+			</div> <!-- end of footer --> 
+			
+		</div> <!-- end of content --> 
+	</div> <!-- end of page --> 
+ </body>
+ </html> 

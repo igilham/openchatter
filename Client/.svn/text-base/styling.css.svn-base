@@ -1,0 +1,83 @@
+body {
+    color:#333333;
+    direction:ltr;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:11px;
+    text-align:left;
+}
+
+#comment-box {
+	width: 500px;
+	height: 90px;
+	border: 1px solid;
+	margin-bottom: 5px;
+	padding: 5px;
+	background-color: #eeeeee
+}
+
+#comment-input {
+	width: 485px;
+	height: 50px;
+	border: 2px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-repeat: no-repeat;
+}
+
+.submit-btn {
+	padding:1px, 15px, 1px, 15px;
+	background-color: #eeeeee;
+	border: 2px solid #cccccc;
+	color:#000;
+	text-decoration:bold;
+}
+
+
+
+
+
+#content {
+    width: 505px;
+    height: auto;
+}
+
+.comment-actions {
+    text-align: right;
+    border: 0px solid;
+    margin-bottom: 5px;
+}
+
+.user {
+    padding-right: 5px;
+}
+
+.comment {
+    width: 500px;
+    height: auto;
+    border: 1pt solid;
+    margin-bottom: 5px;
+    padding: 5px;
+    position: relative;
+    
+    
+}
+
+
+.comment-body {
+    padding-bottom: 10px;
+}
+
+.meta {
+    color:#777777;
+    font-size:11px;
+    position:absolute;
+    bottom:0;
+}
+
+.timestamp {
+    display: none;
+}
+
+.id {
+    display: none;
+}

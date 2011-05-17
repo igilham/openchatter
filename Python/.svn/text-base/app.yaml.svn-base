@@ -1,0 +1,32 @@
+application: gregbaut
+version: 5
+runtime: python
+api_version: 1
+
+handlers:
+- url: /comment/create.*
+  script: create.py
+  login: required
+
+- url: /comments/show.*
+  script: show.py
+
+- url: /comments/date.*
+  script: show.py
+
+- url: /comments/delete.*
+  script: delete.py
+  login: required
+
+- url: /login.*
+  script: login.py
+
+- url: /logout.*
+  script: login.py
+
+- url: /user.*
+  script: login.py
+
+- url: /help
+  static_files: static/help.html
+  upload: static/.*

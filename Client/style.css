@@ -1,0 +1,159 @@
+﻿/*
+ * style.css
+ * Copyright Ian Gilham 2009
+ *
+ * Colour Palette (testing only):
+ * 		Reference: http://colorschemedesigner.com/
+ * - main		#ff4100
+ * - light1		#ff9773
+ * - light2		#ff7140
+ * - dark1		#bf5430
+ * - dark2		#a62a00
+*/
+
+/*
+ * Define block model and basic page layout
+*/
+html{margin:0;padding:0;}
+body{
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-family:Corbel,Verdana,Arial,Helvetica,sans-serif;
+	background:#ff9773 url("bg-top.gif") repeat-x;
+	color:#000000;
+}
+
+#page{
+	margin-top:0;
+	padding:0;
+	background-color:#ff4100;
+	border-left:medium #ff4100 solid;
+	border-right:medium #ff4100 solid;
+	border-top-left-radius:1em;
+	border-top-right-radius:1em;
+	margin-left: auto;
+	margin-right: auto;
+	width:85%;
+	min-width:640px;
+	max-width:1024px;
+}
+
+#content{
+	overflow:auto;
+	text-align:left;
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	margin-left:1em;
+	margin-right:1em;
+}
+
+#header{
+	background-color:#bf5430;
+	padding-left:0.5em;
+	padding-right:0.5em;
+	color:#ffffff;
+	border:#ff4100 1px solid;
+	text-align:center;
+}
+
+#contentMain{
+	position:relative;
+	min-height:350px;
+	height:auto;
+	background-color:#ffffff;
+}
+
+#footer {
+	clear:both;
+	border:1px #ff4100 solid;
+	padding-left:0.5em;
+	padding-right:0.5em;
+	background-color:#a62a00;
+	color:#ffffff;
+	text-align:center;
+}
+
+/* Columns */
+#left{
+	position:relative;
+	float:left;
+	width:70%;
+	padding-left:0.5em;
+	padding-right:0.5em;
+	border-right:thin solid #ff4100;
+}
+
+#right{
+	position:relative;
+	float:right;
+	width:20%;
+	padding-left:0.5em;
+	padding-right:0.5em;
+	min-height:350px;
+}
+
+
+/* Comments list items */
+
+#commentsListBox{
+	padding:0.5em;
+	background-color:#ff7140;
+	border-top-left-radius:1em;
+	border-top-right-radius:1em;
+}
+
+.comment{
+	background-color:#ffffff;
+	margin:0.25em;
+	padding:0.2em;
+}
+.comment:hover{background-color:#ffffe0;}
+.comment-body{text-wrap:true;}
+.timestamp {display : none;}
+.meta .id {	display : none;}
+.meta .comment-actions{ float:right; }
+.meta .date { font-size:0.9em; font-style:italic; color:#696969; }
+
+#comment-box{ 
+	margin-left:auto; 
+	margin-right:auto; 
+	width:80%;
+	margin-bottom: 5px;
+}
+
+#comment-input {
+	width:95%;
+	border: thin solid #cccccc;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#comment-input:focus{
+	background-color:#ffffe0;
+}
+
+#comment-template{display:none;}
+#comment-template div{display:none;}
+
+/* Basic text elements */
+p{font-size:1em;}
+h1,h2,h3,h4,h5,h6{font-family:Constantia,Georgia,"Times New Roman", "Times New", Times, serif;}
+code{font-family:Consolas,"Lucida Console","Courier New",Courier,monospace;}
+p.copyright{font-size:0.85em;}
+div.clear{clear:both;}
+.user_name{color:blue;}
+.user_name:after{content:": ";}
+span.topic{
+	font-weight:bold;
+	white-space:nowrap;
+}
+#right div ol{
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+
+
+
+
+
